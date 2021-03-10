@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebApi.Controllers.HomeController._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.HomeController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Privacy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.HomeController.Error">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.LoginController.TokenService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.LoginController.DataService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.LoginController.Crypt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.#ctor(WebApi.Services.TokenService,Services.DataService,Canducci.GeneratePassword.BCrypt)">
+            <summary>
+            
+            </summary>
+            <param name="tokenService"></param>
+            <param name="dataService"></param>
+            <param name="crypt"></param>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.Auth(Shared.Login)">
+            <summary>
+            
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.GetUser">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.LoginController.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Controllers.TodoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.TodoController.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.#ctor(Services.DataService)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.GetTodo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.GetTodo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.PutTodo(System.Int32,Shared.Todo)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="todo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.PostTodo(Shared.Todo)">
+            <summary>
+            
+            </summary>
+            <param name="todo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.DeleteTodo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.TodoController.TodoExists(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.UserController.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.UserController.Crypt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.#ctor(Services.DataService,Canducci.GeneratePassword.BCrypt)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="crypt"></param>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetUser">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.GetUser(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.PutUser(System.Int32,Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.PostUser(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.UserController.UserExists(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Extensions.WebApiExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Extensions.WebApiExtensions.AddSigningAndTokenConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Extensions.WebApiExtensions.AddSwaggerGenConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Extensions.WebApiExtensions.AddGlobalConfigurations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Models.ErrorViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ErrorViewModel.RequestId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:WebApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Services.TokenResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Expires">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenResult.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.TokenResult.#ctor(System.String,System.DateTime,System.DateTime,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <param name="created"></param>
+            <param name="expires"></param>
+            <param name="status"></param>
+        </member>
+        <member name="T:WebApi.Services.TokenService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenService.TokenConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Services.TokenService.SigningConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Services.TokenService.#ctor(WebApi.Settings.TokenConfigurations,WebApi.Settings.SigningConfigurations)">
+            <summary>
+            
+            </summary>
+            <param name="tokenConfigurations"></param>
+            <param name="signingConfigurations"></param>
+        </member>
+        <member name="M:WebApi.Services.TokenService.GenerateTokenResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Services.TokenService.GenerateTokenJsonResult(Shared.User)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Settings.Secret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebApi.Settings.Secret.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.Secret.ValueToByte">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Settings.SigningConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.SigningConfigurations.Key">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.SigningConfigurations.SigningCredentials">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Settings.SigningConfigurations.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Settings.TokenConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Audience">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Issuer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Settings.TokenConfigurations.Hours">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:WebApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
