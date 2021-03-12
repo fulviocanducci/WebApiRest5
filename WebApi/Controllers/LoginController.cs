@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WebApi.Services;
 using Shared;
 using Services;
+using Microsoft.AspNetCore.Http;
 
 namespace WebApi.Controllers
 {
@@ -16,7 +17,7 @@ namespace WebApi.Controllers
     [Route("api/login")]
     [ApiController]
     [Produces("application/json")]
-    [ProducesResponseType(401)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public class LoginController : Controller
     {
         /// <summary>
@@ -54,8 +55,8 @@ namespace WebApi.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("auth", Name = "Login - Auth")]
-        [ProducesResponseType(200, Type = typeof(TokenResult))]
-        [ProducesResponseType(404, Type = typeof(NotFoundResult))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(TokenResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Auth(Login login)
         {
             CreateUser();
@@ -76,8 +77,8 @@ namespace WebApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("user", Name = "Login - User")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(400)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]        
         [Authorize()]
         public async Task<IActionResult> GetUser()
         {
